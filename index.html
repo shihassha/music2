@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         li {
+            list-style: none;
+        }
+        li a{
+            text-decoration: none;
+            color:white;
+            padding: 20px;
+            font-size: 30px;
+        }
+        li{
+            float: left;
+        }
+    body{
+        background-image: url('R.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    img{
+        margin-top: 200px;
+    }
+    </style>
+</head>
+<body>
+ <center><h1 style="color:silver;"> MY  MUSIC  </h1></center><br>
+   
+  <nav class="nav">
+            <ul>
+                <li>
+                    <a href="#"title="Home">Home</a>
+                </li>
+                <li>
+                    <a href="#" title="Help" >Help</a>
+                </li>
+                <li>
+                    <a href="#" title="Music">Music</a>
+                </li>
+                <li>
+                    <a href="#" title="Search">Search</a>
+                </li>
+                <li>
+                    <a href="#" title="Like Music">Like Music</a>
+                </li>
+            </ul>
+            </nav>
+<img src="play.jpg" height="150px" width="150px" id="icon">
+<p style="color:brown; font-size: 40px;" >ENJOY THE MUSIC <br><br>
+  AND   EVERY MOMENT
+</p>
+<audio id="mysound">
+    <source src="Thee-Minnal-MassTamilan.fm.mp3" type="audio/mp3">
+</audio>
+<script>
+    var mysound = document.getElementById("mysound");
+    var icon = document.getElementById("icon");
+    icon.onclick = function() {
+            if (mysound.paused) {
+                mysound.play();
+                icon.src ="pause.jpg";
+            } else {
+                mysound.pause();
+                icon.src = "play.jpg";
+            }
+        }
+</script>
+
+
+
+</body>
+</html>
